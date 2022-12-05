@@ -1,13 +1,13 @@
 {
-  "name": "@github/custom-element-element",
-  "version": "0.0.1",
-  "description": "Boilerplate for creating a custom element.",
-  "main": "dist/custom-element.js",
-  "module": "dist/custom-element.js",
+  "name": "spoiler-alert-element",
+  "version": "0.0.0-dev",
+  "description": "Don't spoil things!",
+  "main": "dist/spoiler-alert-element.js",
+  "module": "dist/spoiler-alert-element.js",
   "type": "module",
-  "types": "dist/custom-elements.d.ts",
+  "types": "dist/spoiler-alert-elements.d.ts",
   "license": "MIT",
-  "repository": "github/custom-element-boilerplate",
+  "repository": "24webcomponents/spoiler-alert-element",
   "files": [
     "dist"
   ],

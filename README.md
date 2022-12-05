@@ -1,11 +1,11 @@
-# &lt;custom-element&gt; element
+# &lt;spoiler-alert&gt; element
 
-Boilerplate for creating a custom element.
+Don&#039;t spoil things!
 
 ## Installation
-Available on [npm](https://www.npmjs.com/) as [**@github/custom-element-element**](https://www.npmjs.com/package/@github/custom-element-element).
+Available on [npm](https://www.npmjs.com/) as [**spoiler-alert-element**](https://www.npmjs.com/package/spoiler-alert-element).
 ```
-$ npm install --save @github/custom-element-element
+$ npm install --save spoiler-alert-element
 ```
 
 ## Usage
@@ -15,22 +15,19 @@ $ npm install --save @github/custom-element-element
 Import as ES modules:
 
 ```js
-import '@github/custom-element-element'
+import 'spoiler-alert-element'
 ```
 
 Include with a script tag:
 
 ```html
-<script type="module" src="./node_modules/@github/custom-element-element/dist/index.js">
+<script type="module" src="./node_modules/spoiler-alert-element/dist/index.js">
 ```
 
-An example Custom Element. This documentation ends up in the
-README so describe how this elements works here.
-
-You can event add examples on the element is used with Markdown.
+Mask text until the user interacts with it!
 
 ```
-<custom-element></custom-element>
+<spoiler-alert>Hidden text</spoiler-alert>
 ```
 
 ## Browser support
