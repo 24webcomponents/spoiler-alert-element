@@ -8,7 +8,6 @@ const html = String.raw
  * ```
  */
 class SpoilerAlertElement extends HTMLElement {
-  static observedAttributes = ['spoiled']
   #renderRoot = this.attachShadow({mode: 'open'})
 
   connectedCallback(): void {
@@ -37,7 +36,7 @@ class SpoilerAlertElement extends HTMLElement {
     this.toggleAttribute('spoiled', value)
   }
 
-  handleEvent(event: Event) {
+  handleEvent() {
     this.spoiled = true
     try {
       getSelection()?.removeAllRanges()
@@ -45,7 +44,6 @@ class SpoilerAlertElement extends HTMLElement {
       // Empty block!
     }
   }
-
 }
 
 declare global {
