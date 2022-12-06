@@ -1,16 +1,16 @@
-import {assert, fixture, html} from '@open-wc/testing'
+import {expect, fixture, html} from '@open-wc/testing'
 import '../src/spoiler-alert-element'
 
 describe('spoiler-alert', function () {
   describe('element creation', function () {
     it('creates from document.createElement', function () {
       const el = document.createElement('spoiler-alert')
-      assert.equal('SPOILER-ALERT', el.nodeName)
+      expect('SPOILER-ALERT').to.equal(el.nodeName)
     })
 
     it('creates from constructor', function () {
       const el = new window.SpoilerAlertElement()
-      assert.equal('SPOILER-ALERT', el.nodeName)
+      expect('SPOILER-ALERT').to.equal(el.nodeName)
     })
   })
 
@@ -19,9 +19,15 @@ describe('spoiler-alert', function () {
       await fixture(html` <spoiler-alert></spoiler-alert>`)
     })
 
-    it('initiates', function () {
+    it("isn't spoiled by default", function () {
       const ce = document.querySelector('spoiler-alert')
-      assert.equal(ce?.textContent, ':wave:')
+      expect(ce).to.not.have.attribute('spoiled')
+    })
+
+    it('is spoiled after click', function () {
+      const ce = document.querySelector('spoiler-alert')!
+      ce.dispatchEvent(new Event('click'))
+      expect(ce).to.have.attribute('spoiled')
     })
   })
 })
